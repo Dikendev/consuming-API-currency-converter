@@ -1,14 +1,19 @@
+
+//elementos do HTML
 const amountInput = document.getElementById("amount");
 const fromCurrencySelect = document.getElementById("from-currency");
 const toCurrencySelect = document.getElementById("to-currency");
 const convertButton = document.getElementById("convert-button");
 const result = document.getElementById("result");
 
+
 convertButton.addEventListener("click", function(event) {
   event.preventDefault();
+  //set dos valos a serem convertidos
   const amount = amountInput.value;
   const fromCurrency = fromCurrencySelect.value;
   const toCurrency = toCurrencySelect.value;
+  //chamando api
   fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
     .then(response => response.json())
     .then(data => {
