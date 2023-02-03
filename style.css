@@ -1,5 +1,82 @@
-.container {
+#nav__dark_mode {
+  width: 100%;
+  height: 5rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+
+.nav__dark_mode-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  border-radius: 34px;
+  transition: .6s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  left: 3px;
+  bottom: 4px;
+  background: rgb(83, 76, 76);
+  border-radius: 50%;
+  transition: .6s;
+}
+
+input:checked + .slider {
+  background: #b892ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(37px);
+  background: rgb(255, 255, 255);
+  
+}
+
+.dark-mode {
+  background: #0b0a14;
+}
+
+p {
+  color: black;
+}
+
+.dark-mode h1, .dark-mode  p{
+  color: #f7f0e9;
+}
+
+
+
+.container {
+  display: flex;  
   flex-direction: column;
   align-items: center;
 }
@@ -29,19 +106,19 @@ button {
   width: 100px;
   height: 40px;
   font-size: 16px;
-  background-color: lightblue;
+  background-color: #b892ff;
   color: white;
   border: none;
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: blue;
+  background-color: #7b3eec;
   cursor: pointer;
 }
 
 button:active {
-  background-color: aqua;
+  background-color: #7b3eecb2;
   color: black;
 }
 
