@@ -9,7 +9,18 @@
 
 </head>
 <body>
-  
+  <header>
+    <nav id="nav__dark_mode">
+      <div class="nav__dark_mode-content">
+        <h1>Light / Dark Mode Toggle</h1>
+        <label class="switch">
+          <input type="checkbox" onclick="changeMode()">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+  </header>
+
   <div class="container">
     <h1>Currency Converter</h1>
     <form>
@@ -31,7 +42,7 @@
     <p id="result"></p>
   </div>
 
-  
+  <script src="darkmode.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
